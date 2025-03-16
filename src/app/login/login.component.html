@@ -1,0 +1,27 @@
+<div class="login-container">
+  <h2>Iniciar sesión</h2>
+  
+  <form (submit)="onLogin()" *ngIf="!is2FARequired">
+    <label>Email:</label>
+    <input type="email" name="email" [(ngModel)]="email" required>
+    
+    <label>Contraseña:</label>
+    <input type="password" name="password" [(ngModel)]="password" required>
+    
+    <button type="submit">Iniciar sesión</button>
+  </form>
+
+  <form (submit)="verify2FA()" *ngIf="is2FARequired">
+    <label>Código OTP:</label>
+    <input type="text" name="otp" [(ngModel)]="otp" required>
+    
+    <button type="submit">Verificar código</button>
+  </form>
+  
+  <div *ngIf="errorMessage" class="error-message">
+    <p>{{ errorMessage }}</p>
+  </div>
+</div>
+
+
+

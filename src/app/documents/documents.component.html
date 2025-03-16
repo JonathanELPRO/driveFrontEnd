@@ -1,0 +1,31 @@
+<div *ngIf="isLoading" class="loading">
+  Cargando documentos...
+</div>
+
+<div *ngIf="errorMessage" class="error">
+  {{ errorMessage }}
+</div>
+
+<div *ngIf="!isLoading && documents.length > 0">
+  <ul>
+    <li *ngFor="let document of documents">
+      <strong>{{ document.filename }}</strong>
+      <p>Tipo de archivo: {{ document.fileType }}</p>
+      <p>Propietario: {{ document.owner }}</p>
+      <p>Fecha de creación: {{ document.createdAt | date }}</p>
+      <a [href]="getFileDownloadLink(document.fileData)" download="{{ document.filename }}">Descargar</a>
+    </li>
+  </ul>
+</div>
+
+<div *ngIf="!isLoading && documents.length === 0">
+  No se encontraron documentos.
+</div>
+
+<!-- Formulario para cargar un archivo -->
+<div *ngIf="!isLoading">
+  <input type="file" (change)="onFileSelected($event)">
+  <button (click)="onUpload()">Subir Documento</button>
+</div>
+
+<button (click)="logout()">Cerrar Sesión</button>
