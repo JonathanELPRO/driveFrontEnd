@@ -1,0 +1,92 @@
+/* Fondo oscuro y centrar contenido */
+body {
+    background-color: #121212;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+  }
+  
+  /* Contenedor del formulario */
+  form {
+    background-color: #1e1e1e;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    width: 350px;
+    text-align: center;
+  }
+  
+  /* Título */
+  h2 {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #0f0f0f;
+  }
+  
+  /* Etiquetas */
+  label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #bbbbbb;
+  }
+  
+  /* Campos de entrada */
+  input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    background-color: #2a2a2a;
+    color: #ffffff;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+  }
+  
+  input:focus {
+    background-color: #333;
+    border: 1px solid #6200ea;
+  }
+  
+  /* Botón */
+  button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(90deg, #6200ea, #3700b3);
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+  }
+  
+  button:hover {
+    background: linear-gradient(90deg, #3700b3, #6200ea);
+  }
+  
+  /* Enlace para registrarse */
+  p {
+    margin-top: 15px;
+    font-size: 14px;
+  }
+  
+  a {
+    color: #03dac6;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  a:hover {
+    color: #00bfa5;
+  }
