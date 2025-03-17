@@ -1,0 +1,92 @@
+/* Igual que el login, pero con ligeros cambios para mejorar la apariencia */
+body {
+    background-color: #121212;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+  }
+  
+  /* Contenedor */
+  form {
+    background-color: #1e1e1e;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    width: 380px;
+    text-align: center;
+  }
+  
+  /* Título */
+  h2 {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #000000;
+  }
+  
+  /* Campos */
+  label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #bbbbbb;
+  }
+  
+  input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    background-color: #2a2a2a;
+    color: #ffffff;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+  }
+  
+  input:focus {
+    background-color: #333;
+    border: 1px solid #ff0266;
+  }
+  
+  /* Botón */
+  button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(90deg, #ff0266, #d500f9);
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+  }
+  
+  button:hover {
+    background: linear-gradient(90deg, #d500f9, #ff0266);
+  }
+  
+  /* Enlace */
+  p {
+    margin-top: 15px;
+    font-size: 14px;
+  }
+  
+  a {
+    color: #03dac6;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  a:hover {
+    color: #00bfa5;
+  }
+  
