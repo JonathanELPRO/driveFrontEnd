@@ -21,14 +21,19 @@ import { catchError } from 'rxjs/operators';
     }
 
     login(email: string, password: string, otp?: string): Observable<any> {
-      console.log("EMAIL", email);
+      console.log("EMAILLL", email);
       console.log("PASSWORD", password);
-  
+      console.log("RESPUESTAAAA", this.http.post<any>(`${this.apiUrl}/login`, { email, password, otp }))
       return this.http.post<any>(`${this.apiUrl}/login`, { email, password, otp }).pipe(
         tap((response) => {
+          console.log("RESPUESTA DEL BACKEND:", response);  // 🔥 Verifica la respuesta aquí
+    
           if (response.token) {
+            console.log("TOKEN RECIBIDO:", response.token);  // 🔥 Verifica si hay token
             localStorage.setItem('token', response.token);
             this.router.navigate(['/documents']);
+          } else {
+            console.warn("No se recibió un token en la respuesta.");
           }
         }),
         catchError((error) => {
